@@ -18,7 +18,8 @@
 
   "autoload": {
     "psr-4": {
-      "JorgenVatle\\LuminatiProxyHelpers\\": "src/"
+      "JorgenVatle\\LuminatiProxyHelpers\\": "src/",
+      "JorgenVatle\\LuminatiProxyHelpers\\Tests\\": "tests/"
     }
   },
   "require-dev": {
