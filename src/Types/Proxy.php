@@ -38,7 +38,7 @@ class Proxy {
         $parts = explode(':', $cleanedProxy, 2);
 
         $this->host = $parts[0];
-        $this->port = $parts[1];
+        $this->port = (integer) $parts[1];
     }
 
 }
