@@ -6,7 +6,7 @@ use JorgenVatle\LuminatiProxyHelpers\Tests\TestCase;
 class ProxyHelpersTest extends TestCase {
 
     /** @test */
-    public function it_resolves_socks_ports_from_http_proxies() {
+    public function it_converts_an_http_proxy_into_the_socks_equivalent() {
         $proxy = LuminatiProxyHelpers::getSocks('127.0.0.1:22000');
 
         $this->assertEquals('socks', $proxy->getType());
