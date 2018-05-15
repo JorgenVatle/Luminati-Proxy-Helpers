@@ -4,6 +4,14 @@ namespace JorgenVatle\LuminatiProxyHelpers\Tests;
 
 class TestCase extends \Orchestra\Testbench\TestCase {
 
-    // Test Case
+    /**
+     * Package service provider
+     *
+     * @param \Illuminate\Foundation\Application $app
+     * @return array
+     */
+    protected function getPackageProviders($app) {
+        return ['JorgenVatle\LuminatiProxyHelpers'];
+    }
 
 }
