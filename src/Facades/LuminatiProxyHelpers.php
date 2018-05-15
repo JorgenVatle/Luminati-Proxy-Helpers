@@ -12,7 +12,7 @@ class LuminatiProxyHelpers extends Facade {
      * @return string
      */
     public static function getFacadeAccessor() {
-        return 'luminati.proxy.helpers';
+        return \JorgenVatle\LuminatiProxyHelpers\LuminatiProxyHelpers::class;
     }
 
 }
