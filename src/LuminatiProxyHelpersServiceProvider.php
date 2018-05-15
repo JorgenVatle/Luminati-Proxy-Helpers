@@ -14,7 +14,7 @@ class LuminatiProxyHelpersServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->singleton(LuminatiProxyHelpers::class, function ($app) {
+        $this->app->singleton('luminati.proxy.helpers', function ($app) {
             return new LuminatiProxyHelpers(22000, 1500);
         });
     }
