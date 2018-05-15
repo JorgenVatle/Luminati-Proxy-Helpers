@@ -103,4 +103,16 @@ abstract class Proxy {
         return $this;
     }
 
+    /**
+     * Builds an associative array for the current proxy.
+     *
+     * @return array
+     */
+    public function buildArray() {
+        return [
+            'host' => $this->host,
+            'port' => $this->port,
+            'type' => $this->type,
+        ];
+    }
 }
