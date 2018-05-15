@@ -18,4 +18,15 @@ class LuminatiProxyHelpers {
      */
     protected $socksPortStart = 1500;
 
+    /**
+     * LuminatiProxyHelpers constructor.
+     *
+     * @param $httpPortStart
+     * @param $socksPortStart
+     */
+    public function __construct($httpPortStart, $socksPortStart) {
+        $this->httpPortStart = $httpPortStart;
+        $this->socksPortStart = $socksPortStart;
+    }
+
 }
