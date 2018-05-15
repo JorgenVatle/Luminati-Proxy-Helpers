@@ -2,7 +2,7 @@
 
 namespace JorgenVatle\LuminatiProxyHelpers\Tests;
 
-class TestCase extends \Orchestra\Testbench\TestCase {
+abstract class TestCase extends \Orchestra\Testbench\TestCase {
 
     /**
      * Package service provider.
@@ -11,7 +11,7 @@ class TestCase extends \Orchestra\Testbench\TestCase {
      * @return array
      */
     protected function getPackageProviders($app) {
-        return ['JorgenVatle\LuminatiProxyHelpers'];
+        return ['JorgenVatle\LuminatiProxyHelpers\LuminatiProxyHelpersServiceProvider'];
     }
 
     /**
