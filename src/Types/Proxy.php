@@ -19,6 +19,13 @@ abstract class Proxy {
     protected $port;
 
     /**
+     * Proxy type.
+     *
+     * @var string
+     */
+    protected $type = 'http';
+
+    /**
      * Proxy constructor.
      *
      * @param string $proxy
