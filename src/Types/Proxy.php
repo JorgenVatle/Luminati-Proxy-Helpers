@@ -2,7 +2,7 @@
 
 namespace JorgenVatle\LuminatiProxyHelpers\Types;
 
-class Proxy {
+abstract class Proxy {
 
     /**
      * Proxy host.
