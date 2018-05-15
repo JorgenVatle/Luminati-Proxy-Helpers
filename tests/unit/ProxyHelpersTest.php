@@ -14,4 +14,13 @@ class ProxyHelpersTest extends TestCase {
         $this->assertEquals('127.0.0.1', $proxy->getHost());
     }
 
+    /** @test */
+    public function it_resolves_http_ports_from_socks_proxies() {
+        $proxy = LuminatiProxyHelpers::getHttp('127.0.0.1:1500');
+
+        $this->assertEquals('http', $proxy->getType());
+        $this->assertEquals(22000, $proxy->getPort());
+        $this->assertEquals('127.0.0.1', $proxy->getHost());
+    }
+
 }
