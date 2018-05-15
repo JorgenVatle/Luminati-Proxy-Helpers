@@ -34,11 +34,11 @@ class LuminatiProxyHelpers {
     /**
      * Fetches the SOCKS equivalent for the given port.
      *
-     * @param $port
+     * @param $httpPort
      * @return int
      */
-    public function getSocksPort(int $port): int {
-        return $this->httpPortStart - $port + $this->socksPortStart;
+    public function getSocksPort(int $httpPort): int {
+        return $this->httpPortStart - $httpPort + $this->socksPortStart;
     }
 
 }
