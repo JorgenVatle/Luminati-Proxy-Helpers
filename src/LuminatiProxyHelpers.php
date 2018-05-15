@@ -2,6 +2,8 @@
 
 namespace JorgenVatle\LuminatiProxyHelpers;
 
+use JorgenVatle\LuminatiProxyHelpers\Types\SocksProxy;
+
 class LuminatiProxyHelpers {
 
     /**
@@ -27,6 +29,16 @@ class LuminatiProxyHelpers {
     public function __construct($httpPortStart, $socksPortStart) {
         $this->httpPortStart = $httpPortStart;
         $this->socksPortStart = $socksPortStart;
+    }
+
+    /**
+     * Fetches the SOCKS equivalent for the given port.
+     *
+     * @param $port
+     * @return int
+     */
+    public function getSocksPort(int $port): int {
+        return $this->httpPortStart - $port + $this->socksPortStart;
     }
 
 }
