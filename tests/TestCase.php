@@ -11,7 +11,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase {
      * @return array
      */
     protected function getPackageProviders($app) {
-        return ['JorgenVatle\LuminatiProxyHelpers\LuminatiProxyHelpersServiceProvider'];
+        return ['JorgenVatle\LuminatiProxyHelpers\ServiceProvider'];
     }
 
     /**

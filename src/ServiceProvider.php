@@ -4,7 +4,7 @@ namespace JorgenVatle\LuminatiProxyHelpers;
 
 use Illuminate\Support\ServiceProvider;
 
-class LuminatiProxyHelpersServiceProvider extends ServiceProvider {
+class ServiceProvider extends ServiceProvider {
 
 
     /**
