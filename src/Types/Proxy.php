@@ -48,4 +48,31 @@ abstract class Proxy {
         $this->port = (integer) $parts[1];
     }
 
+    /**
+     * Fetches the current host.
+     *
+     * @return string
+     */
+    public function getHost(): string {
+        return $this->host;
+    }
+
+    /**
+     * Fetches the current port.
+     *
+     * @return int
+     */
+    public function getPort(): int {
+        return $this->port;
+    }
+
+    /**
+     * Fetches the current proxy type.
+     *
+     * @return string
+     */
+    public function getType(): string {
+        return $this->type;
+    }
+
 }
