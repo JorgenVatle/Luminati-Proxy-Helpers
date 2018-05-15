@@ -65,4 +65,17 @@ class LuminatiProxyHelpers {
         return new SocksProxy($proxy->buildArray());
     }
 
+    /**
+     * Creates a new HttpProxy instance from the given SOCKS proxy string.
+     *
+     * @param string $socksProxyString
+     * @return HttpProxy
+     */
+    public function getHttp(string $socksProxyString): HttpProxy {
+        $proxy = new SocksProxy($socksProxyString);
+        $proxy->setPort($this->getHttpPort($proxy->getPort()));
+
+        return new HttpProxy($proxy->buildArray());
+    }
+
 }
