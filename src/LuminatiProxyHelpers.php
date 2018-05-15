@@ -41,4 +41,14 @@ class LuminatiProxyHelpers {
         return $this->httpPortStart - $httpPort + $this->socksPortStart;
     }
 
+    /**
+     * Fetches the HTTP port equivalent of the given port.
+     *
+     * @param int $socksPort
+     * @return int
+     */
+    public function getHttpPort(int $socksPort): int {
+        return $this->socksPortStart - $socksPort + $this->httpPortStart;
+    }
+
 }
