@@ -2,6 +2,7 @@
 
 namespace JorgenVatle\LuminatiProxyHelpers;
 
+use JorgenVatle\LuminatiProxyHelpers\Types\HttpProxy;
 use JorgenVatle\LuminatiProxyHelpers\Types\SocksProxy;
 
 class LuminatiProxyHelpers {
@@ -49,6 +50,19 @@ class LuminatiProxyHelpers {
      */
     public function getHttpPort(int $socksPort): int {
         return $this->socksPortStart - $socksPort + $this->httpPortStart;
+    }
+
+    /**
+     * Creates a new SocksProxy instance from an HTTP proxy string.
+     *
+     * @param string $httpProxyString
+     * @return SocksProxy
+     */
+    public function getSocks(string $httpProxyString): SocksProxy {
+        $proxy = new HttpProxy($httpProxyString);
+        $proxy->setPort($this->getSocksPort($proxy->getPort()));
+
+        return new SocksProxy($proxy->buildArray());
     }
 
 }
