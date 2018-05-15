@@ -3,7 +3,7 @@
 use JorgenVatle\LuminatiProxyHelpers\Facades\LuminatiProxyHelpers;
 use JorgenVatle\LuminatiProxyHelpers\Tests\TestCase;
 
-class ProxyHelpersTest extends TestCase {
+class LuminatiProxyHelpersTest extends TestCase {
 
     /** @test */
     public function it_converts_an_http_proxy_into_the_socks_equivalent() {
