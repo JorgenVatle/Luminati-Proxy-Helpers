@@ -16,14 +16,26 @@
     "illuminate/support": ">=5.0,<5.7"
   },
 
+  "require-dev": {
+    "orchestra/testbench": "~3.0.0",
+    "phpunit/phpunit": "~5"
+  },
+
   "autoload": {
     "psr-4": {
       "JorgenVatle\\LuminatiProxyHelpers\\": "src/",
       "JorgenVatle\\LuminatiProxyHelpers\\Tests\\": "tests/"
     }
   },
-  "require-dev": {
-    "orchestra/testbench": "~3.0.0",
-    "phpunit/phpunit": "~5"
+
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JorgenVatle\\Luminati-Proxy-Helpers\\ServiceProvider"
+      ],
+      "aliases": {
+        "LuminatiProxyHelpers": "JorgenVatle\\Luminati-Proxy-Helpers\\Facades\\LuminatiProxyHelpers"
+      }
+    }
   }
 }
