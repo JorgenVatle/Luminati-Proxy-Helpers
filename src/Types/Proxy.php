@@ -75,4 +75,26 @@ abstract class Proxy {
         return $this->type;
     }
 
+    /**
+     * Sets the current proxy host to the given host.
+     *
+     * @param string $host
+     * @return Proxy
+     */
+    public function setHost(string $host): Proxy {
+        $this->host = $host;
+        return $this;
+    }
+
+    /**
+     * Sets the current proxy port to the given port.
+     *
+     * @param int $port
+     * @return Proxy
+     */
+    public function setPort(int $port): Proxy {
+        $this->port = $port;
+        return $this;
+    }
+
 }
