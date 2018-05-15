@@ -108,7 +108,7 @@ abstract class Proxy {
      *
      * @return array
      */
-    public function buildArray() {
+    public function toArray() {
         return [
             'host' => $this->host,
             'port' => $this->port,

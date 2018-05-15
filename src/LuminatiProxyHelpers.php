@@ -62,7 +62,7 @@ class LuminatiProxyHelpers {
         $proxy = new HttpProxy($httpProxyString);
         $proxy->setPort($this->getSocksPort($proxy->getPort()));
 
-        return new SocksProxy($proxy->buildArray());
+        return new SocksProxy($proxy->toArray());
     }
 
     /**
@@ -75,7 +75,7 @@ class LuminatiProxyHelpers {
         $proxy = new SocksProxy($socksProxyString);
         $proxy->setPort($this->getHttpPort($proxy->getPort()));
 
-        return new HttpProxy($proxy->buildArray());
+        return new HttpProxy($proxy->toArray());
     }
 
 }
