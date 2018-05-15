@@ -28,10 +28,16 @@ abstract class Proxy {
     /**
      * Proxy constructor.
      *
-     * @param string $proxy
+     * @param string|array $proxy
      */
-    function __construct(string $proxy) {
-        $this->buildFromString($proxy);
+    function __construct($proxy) {
+        if (is_string($proxy)) {
+            $this->buildFromString($proxy);
+            return;
+        }
+
+        $this->host = $proxy['host'];
+        $this->port = $proxy['port'];
     }
 
     /**
