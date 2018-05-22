@@ -31,10 +31,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "JorgenVatle\\Luminati-Proxy-Helpers\\ServiceProvider"
+        "JorgenVatle\\LuminatiProxyHelpers\\ServiceProvider"
       ],
       "aliases": {
-        "LuminatiProxyHelpers": "JorgenVatle\\Luminati-Proxy-Helpers\\Facades\\LuminatiProxyHelpers"
+        "LuminatiProxyHelpers": "JorgenVatle\\LuminatiProxyHelpers\\Facades\\LuminatiProxyHelpers"
       }
     }
   }
