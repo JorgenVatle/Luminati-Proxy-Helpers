@@ -29,10 +29,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
      */
     public function register() {
 
+        $this->mergeConfigFrom($this->config, 'proxyhelpers');
+
         $this->app->singleton('luminati.proxy.helpers', function ($app) {
 
-            $httpStart = $app['config']['proxyhelpers.http_start'] ?? 22000;
-            $socksStart = $app['config']['proxyhelpers.socks_start'] ?? 1500;
+            $httpStart = $app['config']['proxyhelpers.http_start'];
+            $socksStart = $app['config']['proxyhelpers.socks_start'];
 
             return new LuminatiProxyHelpers($httpStart, $socksStart);
         });
