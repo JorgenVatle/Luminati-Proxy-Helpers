@@ -69,7 +69,7 @@ abstract class Proxy {
      * @return int
      */
     public function getPort(): int {
-        return $this->port;
+        return (integer) $this->port;
     }
 
     /**
