@@ -9,7 +9,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
      *
      * @var string
      */
-    protected $config = __DIR__.'/../config/proxyhelpers.php';
+    protected $config = __DIR__.'/config/proxyhelpers.php';
 
     /**
      * Package bootstrapper.
