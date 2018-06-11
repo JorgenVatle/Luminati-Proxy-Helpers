@@ -39,7 +39,7 @@ class LuminatiProxyHelpers {
      * @return int
      */
     public function getSocksPort(int $httpPort): int {
-        return $this->httpPortStart - $httpPort + $this->socksPortStart;
+        return $httpPort - $this->httpPortStart + $this->socksPortStart;
     }
 
     /**
@@ -49,7 +49,7 @@ class LuminatiProxyHelpers {
      * @return int
      */
     public function getHttpPort(int $socksPort): int {
-        return $this->socksPortStart - $socksPort + $this->httpPortStart;
+        return $socksPort - $this->socksPortStart + $this->httpPortStart;
     }
 
     /**
